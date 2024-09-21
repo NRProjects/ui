@@ -53,3 +53,26 @@
 		</div>
 	</div>
 {/if}
+
+<!--<style>-->
+<!--	.container {-->
+<!--		position: fixed;-->
+<!--		inset: 0;-->
+
+<!--		z-index: 50;-->
+
+<!--		display: flex;-->
+<!--		height: 100%;-->
+<!--		width: 100%;-->
+<!--		flex-grow: 1;-->
+
+<!--		flex-direction: column;-->
+
+<!--		align-items: center;-->
+<!--		justify-content: center;-->
+
+<!--		padding: 2rem;-->
+
+<!--		backdrop-filter: blur(4px);-->
+<!--	}-->
+<!--</style>-->
