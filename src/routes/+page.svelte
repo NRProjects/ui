@@ -1,3 +1,11 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import Button from '$lib/components/Button.svelte';
+	import Input from '$lib/components/Input.svelte';
+	import AlertDialog from '$lib/components/AlertDialog.svelte';
+</script>
+
+<div class="flex flex-grow flex-col items-center justify-between">
+	<Button />
+	<Input />
+	<AlertDialog>Alert</AlertDialog>
+</div>

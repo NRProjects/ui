@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-family: 'Geist Sans', 'Geist Sans Backup', sans-serif;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url('./GeistVF.woff2') format('woff2-variations');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'Geist Sans Backup';
+    src: url('./GeistVF.woff') format('woff2-variations');
+    font-weight: 100 900;
+}
