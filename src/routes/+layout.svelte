@@ -2,10 +2,8 @@
 	import '$lib/index.css';
 </script>
 
-<slot />
-
-<style lang="postcss">
-	:global(body) {
-		background-color: gray;
-	}
-</style>
+<div
+	class="min-w-screen max-w-screen flex min-h-screen flex-grow flex-col content-center items-center"
+>
+	<slot />
+</div>

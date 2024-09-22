@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { cn } from '$lib/utils/utils.js';
+	import type { HeadingProps } from '$types/types.js';
 
-	let { class: _class, children } = $props();
+	let { class: _class, children }: HeadingProps = $props();
 </script>
 
-<h1 class={cn('text-xl font-bold max-md:text-base', _class)}>
+<h1 class={cn('max-md:text-base text-xl font-bold', _class)}>
 	{#if children}
 		{@render children()}
 	{:else}

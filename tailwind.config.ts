@@ -1,4 +1,3 @@
-// @ts-ignore
 import { fontFamily } from 'tailwindcss/defaultTheme';
 import type { Config } from 'tailwindcss';
 
@@ -11,6 +10,9 @@ const config: Config = {
 			mobile: '769px',
 			tablet: '1025px',
 			desktop: '1367px',
+		},
+		fontFamily: {
+			geist: ['Geist Sans'],
 		},
 		extend: {
 			colors: {

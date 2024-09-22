@@ -1,13 +1,13 @@
 <script lang="ts">
-	import type { ButtonProps } from '$types/types.js';
 	import { cn } from '$lib/utils/utils.js';
+	import type { GridItem } from '$types/types.js';
 
-	let { class: _class, children, ...props }: ButtonProps = $props();
+	let { class: _class, children, ...props }: GridItem = $props();
 </script>
 
 <button
 	class={cn(
-		'max-tablet:text-3xl max-mobile:text-base aspect-square rounded-md border border-gray-200 bg-white px-4 py-2 text-lg font-medium transition-all duration-200 ease-in-out',
+		'aspect-square rounded-md border border-gray-200 bg-white px-4 py-2 text-lg font-medium transition-all duration-200 ease-in-out max-tablet:text-3xl max-mobile:text-base',
 		_class
 	)}
 	{...props}

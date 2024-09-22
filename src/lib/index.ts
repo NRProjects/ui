@@ -8,3 +8,5 @@ export { default as Grid } from './components/Grid/Grid.svelte';
 export { default as GridItem } from './components/Grid/GridItem.svelte';
 export { default as Navbar } from './components/Navbar/Navbar.svelte';
 export { default as NavbarItem } from './components/Navbar/NavbarItem.svelte';
+export { default as Field } from './components/Field.svelte';
+export { default as Label } from './components/Label.svelte';
