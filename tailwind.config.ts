@@ -7,12 +7,10 @@ const config: Config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	safelist: ['dark'],
 	theme: {
-		container: {
-			center: true,
-			padding: '2rem',
-			screens: {
-				'2xl': '1400px',
-			},
+		screens: {
+			mobile: '769px',
+			tablet: '1025px',
+			desktop: '1367px',
 		},
 		extend: {
 			colors: {

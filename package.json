@@ -3,7 +3,7 @@
 	"main": "dist/index.js",
 	"version": "0.0.17",
 	"scripts": {
-		"dev": "vite dev --port 5172",
+		"dev": "vite dev --port 5172 --host",
 		"build": "vite build && npm run package",
 		"build:css": "npx tailwindcss -i src/lib/index.css -o ./dist/index.css --minify",
 		"preview": "vite preview",
