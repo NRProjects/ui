@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { cn } from '$lib/utils/utils.js';
 	import Button from '$lib/components/Button.svelte';
 	import { scale } from 'svelte/transition';
+	import type { ComponentProps } from 'svelte';
 
 	let {
-		class: _class,
-		children,
 		content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec erat enim. Nullam sapien nisi, vestibulum id ex sit amet, cursus feugiat eros.',
 		header = 'Lorem Ipsum',
-		closeButtonClass = 'border-0 bg-rose-700 text-white hover:bg-rose-800',
-		continueButtonClass = 'border border-gray-200',
+		classButton = '',
+		classCloseButton = 'border-0 bg-rose-700 text-white hover:bg-rose-800',
+		classContinueButton = 'border border-gray-200',
+		buttonText = 'Alert',
 		closeButtonText = 'Cancel',
 		continueButtonText = 'Continue',
 		continue: _continue = () => close(),
@@ -27,7 +27,7 @@
 	}
 </script>
 
-<Button class={cn(_class)} {children} onclick={() => open()} />
+<Button class={classButton} onclick={() => open()}>{buttonText}</Button>
 
 {#if _open}
 	<div
@@ -42,37 +42,14 @@
 				{content}
 			</p>
 			<div class="flex w-full flex-row justify-end gap-2">
-				<Button onclick={() => close()} class={closeButtonClass}
+				<Button onclick={() => close()} class={classCloseButton}
 					>{closeButtonText}</Button
 				>
 
-				<Button class={continueButtonClass} onclick={_continue}
+				<Button class={classContinueButton} onclick={_continue}
 					>{continueButtonText}</Button
 				>
 			</div>
 		</div>
 	</div>
 {/if}
-
-<!--<style>-->
-<!--	.container {-->
-<!--		position: fixed;-->
-<!--		inset: 0;-->
-
-<!--		z-index: 50;-->
-
-<!--		display: flex;-->
-<!--		height: 100%;-->
-<!--		width: 100%;-->
-<!--		flex-grow: 1;-->
-
-<!--		flex-direction: column;-->
-
-<!--		align-items: center;-->
-<!--		justify-content: center;-->
-
-<!--		padding: 2rem;-->
-
-<!--		backdrop-filter: blur(4px);-->
-<!--	}-->
-<!--</style>-->
