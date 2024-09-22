@@ -16,6 +16,6 @@
 </script>
 
 <div class={cn('flex flex-col gap-2', _class)}>
-	<Label type={inputType} class={labelClass}>{label}</Label>
-	<Input class={inputClass} placeholder={input} />
+	<Label class={labelClass}>{label}</Label>
+	<Input type={inputType} class={inputClass} placeholder={input} />
 </div>
