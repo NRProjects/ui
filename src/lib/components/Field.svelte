@@ -8,6 +8,7 @@
 		class: _class,
 		label = 'Label',
 		input = 'Placeholder',
+		inputMode = 'none',
 		inputType = 'text',
 		labelClass,
 		inputClass,
@@ -17,5 +18,5 @@
 
 <div class={cn('flex flex-col gap-2', _class)}>
 	<Label class={labelClass}>{label}</Label>
-	<Input type={inputType} class={inputClass} placeholder={input} />
+	<Input type={inputType} class={inputClass} placeholder={input} {inputMode} inputmode={inputMode} />
 </div>

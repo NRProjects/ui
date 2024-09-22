@@ -54,6 +54,7 @@ export interface FieldProps extends Omit<HTMLAttributes<never>, keyof Props>, Pr
 		| 'time'
 		| 'url'
 		| 'week';
+	inputMode?: 'decimal' | 'email' | 'none' | 'numeric' | 'search' | 'tel' | 'text' | 'url';
 	labelClass?: string;
 	inputClass?: string;
 }
