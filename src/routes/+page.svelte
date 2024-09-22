@@ -12,5 +12,5 @@
 	<!--		<GridItem class="aspect-auto max-mobile:h-20"></GridItem>-->
 	<!--	</Grid>-->
 
-	<Field />
+	<Field inputType="number" />
 </div>
