@@ -31,6 +31,29 @@ export interface LabelProps extends Omit<HTMLAttributes<HTMLLabelElement>, keyof
 export interface FieldProps extends Omit<HTMLAttributes<never>, keyof Props>, Props {
 	label?: string;
 	input?: string;
+	inputType:
+		| 'button'
+		| 'checkbox'
+		| 'color'
+		| 'date'
+		| 'datetime-local'
+		| 'email'
+		| 'file'
+		| 'hidden'
+		| 'image'
+		| 'month'
+		| 'number'
+		| 'password'
+		| 'radio'
+		| 'range'
+		| 'reset'
+		| 'search'
+		| 'submit'
+		| 'tel'
+		| 'text'
+		| 'time'
+		| 'url'
+		| 'week';
 	labelClass?: string;
 	inputClass?: string;
 }
