@@ -63,8 +63,8 @@ export interface NavbarProps extends Omit<HTMLAttributes<never>, keyof Props>, P
 	entries?: string[];
 }
 
-export interface NavbarItem extends Omit<HTMLAttributes<never>, keyof Props>, Props {}
+export interface NavbarItemProps extends Omit<HTMLAttributes<never>, keyof Props>, Props {}
 
-export interface Grid extends Omit<HTMLAttributes<never>, keyof Props>, Props {}
+export interface GridProps extends Omit<HTMLAttributes<never>, keyof Props>, Props {}
 
-export interface GridItem extends Omit<HTMLAttributes<never>, keyof Props>, Props {}
+export interface GridItemProps extends Omit<HTMLAttributes<never>, keyof Props>, Props {}

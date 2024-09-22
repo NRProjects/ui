@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { cn } from '$lib/utils/utils.js';
-	import type { GridItem } from '$types/types.js';
+	import type { GridItemProps } from '$types/types.js';
 
-	let { class: _class, children, ...props }: GridItem = $props();
+	let { class: _class, children, ...props }: GridItemProps = $props();
 </script>
 
 <button

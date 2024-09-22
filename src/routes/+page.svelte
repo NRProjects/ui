@@ -1,16 +1,34 @@
 <script lang="ts">
 	import Field from '$lib/components/Field.svelte';
+	import Grid from '$lib/components/Grid/Grid.svelte';
 </script>
 
-<div class="m-auto flex flex-col">
-	<!--	<Grid class="m-auto content-between justify-between max-mobile:grid-cols-1">-->
-	<!--		<GridItem class="aspect-auto max-mobile:h-20"></GridItem>-->
-	<!--		<GridItem class="aspect-auto max-mobile:h-20"></GridItem>-->
-	<!--		<GridItem class="aspect-auto max-mobile:h-20"></GridItem>-->
-	<!--		<GridItem class="aspect-auto max-mobile:h-20"></GridItem>-->
-	<!--		<GridItem class="aspect-auto max-mobile:h-20"></GridItem>-->
-	<!--		<GridItem class="aspect-auto max-mobile:h-20"></GridItem>-->
-	<!--	</Grid>-->
+<div class="flex h-full w-full flex-grow flex-col justify-center bg-black p-4">
+	<Grid class="grid-cols-2">
+		<Field
+			label="Starting Weight"
+			input="Starting weight"
+			inputType="number"
+			labelClass="text-white"
+			inputClass="bg-neutral-950 border text-gray-200 border-gray-200 hover:bg-neutral-900 transition duration-200 ease-in-out"
+		/>
 
-	<Field inputType="number" />
+		<Field
+			label="Ending Weight"
+			input="Ending weight"
+			inputType="number"
+			labelClass="text-white"
+			inputClass="bg-neutral-950 border text-gray-200 border-gray-200 hover:bg-neutral-900 transition duration-200 ease-in-out"
+		/>
+	</Grid>
+
+	<Grid class="grid-cols-1">
+		<Field
+			label="Payouts Counted"
+			input="Payouts counted"
+			inputType="number"
+			labelClass="text-white"
+			inputClass="bg-neutral-950 border text-gray-200 border-gray-200 hover:bg-neutral-900 transition duration-200 ease-in-out"
+		/>
+	</Grid>
 </div>
