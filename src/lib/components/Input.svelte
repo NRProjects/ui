@@ -2,7 +2,9 @@
 	import { cn } from '$lib/utils/utils.js';
 	import type { InputProps } from '$types/types.js';
 
-	let { class: _class, placeholder = 'Placeholder', ...props }: InputProps = $props();
+	let { class: _class, placeholder = 'Placeholder', value = $bindable(), ...props }: InputProps = $props();
+
+	// console.log($inspect(bind));
 </script>
 
 <input
@@ -11,5 +13,6 @@
 		_class
 	)}
 	{placeholder}
+	bind:value
 	{...props}
 />

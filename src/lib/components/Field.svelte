@@ -7,9 +7,10 @@
 	let {
 		class: _class,
 		label = 'Label',
-		input = 'Placeholder',
+		value = $bindable(),
+		placeholder: _placeholder = 'Placeholder',
 		inputMode = 'none',
-		inputType = 'text',
+		type: _type = 'text',
 		labelClass,
 		inputClass,
 		...props
@@ -18,5 +19,5 @@
 
 <div class={cn('flex flex-col gap-2', _class)}>
 	<Label class={labelClass}>{label}</Label>
-	<Input type={inputType} class={inputClass} placeholder={input} {inputMode} inputmode={inputMode} />
+	<Input type={_type} class={inputClass} placeholder={_placeholder} inputmode={inputMode} bind:value />
 </div>

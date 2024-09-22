@@ -22,6 +22,7 @@ export interface AlertDialogProps extends Omit<HTMLAttributes<never>, keyof Prop
 
 export interface InputProps extends Omit<HTMLAttributes<HTMLInputElement>, keyof Props>, Props {
 	placeholder?: string;
+	value?: ReturnType<typeof $bindable>;
 }
 
 export interface HeadingProps extends Omit<HTMLAttributes<HTMLHeadingElement>, keyof Props>, Props {}
@@ -30,8 +31,10 @@ export interface LabelProps extends Omit<HTMLAttributes<HTMLLabelElement>, keyof
 
 export interface FieldProps extends Omit<HTMLAttributes<never>, keyof Props>, Props {
 	label?: string;
-	input?: string;
-	inputType:
+	value?: ReturnType<typeof $bindable>;
+	placeholder?: string;
+	inputMode?: 'decimal' | 'email' | 'none' | 'numeric' | 'search' | 'tel' | 'text' | 'url';
+	type:
 		| 'button'
 		| 'checkbox'
 		| 'color'
@@ -54,7 +57,6 @@ export interface FieldProps extends Omit<HTMLAttributes<never>, keyof Props>, Pr
 		| 'time'
 		| 'url'
 		| 'week';
-	inputMode?: 'decimal' | 'email' | 'none' | 'numeric' | 'search' | 'tel' | 'text' | 'url';
 	labelClass?: string;
 	inputClass?: string;
 }
