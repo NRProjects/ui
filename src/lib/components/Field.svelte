@@ -9,7 +9,7 @@
 		label = 'Label',
 		value = $bindable(),
 		placeholder: _placeholder = 'Placeholder',
-		inputMode = 'none',
+		inputmode: inputMode = 'none',
 		type: _type = 'text',
 		labelClass,
 		inputClass,
