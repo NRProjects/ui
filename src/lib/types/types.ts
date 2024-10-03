@@ -9,6 +9,7 @@ export interface GenericProps {
     class?: string | undefined;
     children?: Snippet | undefined;
     props?: Props<never> | undefined;
+    name?: string;
 }
 
 export interface ButtonProps extends Omit<HTMLAttributes<HTMLButtonElement>, keyof GenericProps>, GenericProps {}
@@ -20,7 +21,7 @@ export interface AlertDialogProps extends Omit<HTMLAttributes<never>, keyof Gene
     classCloseButton?: string;
     classContinueButton?: string;
     buttonText?: string;
-    closeButtonText?: string;
+    closeButtonText?: () => void | string;
     continueButtonText?: string;
     continue?: () => void;
 }
@@ -71,6 +72,7 @@ export interface FieldProps extends Omit<HTMLAttributes<never>, keyof GenericPro
 export interface NavbarProps extends Omit<HTMLAttributes<never>, keyof GenericProps>, GenericProps {
     heading?: string;
     entries?: string[];
+    type: 'default' | 'side';
 }
 
 export interface NavbarItemProps extends Omit<HTMLAttributes<never>, keyof GenericProps>, GenericProps {}

@@ -1,15 +1,16 @@
 <script lang="ts">
-	import Field from '$lib/components/Field.svelte';
-	import Input from '$lib/components/Input.svelte';
+    import { enhance } from '$app/forms';
+    import Input from '$lib/components/Input.svelte';
+    import Label from '$lib/components/Label.svelte';
 
-	let test = $state();
+    let test = $state();
 </script>
 
-<div class="flex h-full w-full flex-col justify-center gap-10 p-4">
-	<Input inputmode="numeric" type="number" />
+<div class="flex h-full w-full flex-col justify-center p-4">
+    <form class="flex flex-col" method="POST" use:enhance>
+        <Label></Label>
+        <Input />
 
-	<Field bind:value={test}></Field>
-	<span>
-		{test}
-	</span>
+        <button>Submit</button>
+    </form>
 </div>
