@@ -5,11 +5,17 @@ export type Props<T> = {
     item: T;
 };
 
+export type ElementType = 'input' | 'label' | 'heading' | 'button';
+export type ColorScheme = 'light' | 'dark';
+export type Size = 'small' | 'medium' | 'large';
+
 export interface GenericProps {
     class?: string | undefined;
     children?: Snippet | undefined;
     props?: Props<never> | undefined;
     name?: string;
+    variant?: ColorScheme;
+    size?: Size;
 }
 
 export interface ButtonProps extends Omit<HTMLAttributes<HTMLButtonElement>, keyof GenericProps>, GenericProps {}
