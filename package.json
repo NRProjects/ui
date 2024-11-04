@@ -1,7 +1,7 @@
 {
     "name": "@nrprojects/ui",
     "main": "dist/index.js",
-    "version": "0.0.29",
+    "version": "0.0.30",
     "scripts": {
         "dev": "vite dev --port 5172 --host",
         "build": "vite build && npm run package",
