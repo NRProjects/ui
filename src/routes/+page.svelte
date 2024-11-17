@@ -5,9 +5,7 @@
     import Heading from '$lib/components/Heading.svelte';
     import Input from '$lib/components/Input.svelte';
     import { fade, scale } from 'svelte/transition';
-    import * as Tooltip from '$lib/components/Tooltip/index.js';
     import { getContext } from 'svelte';
-    import * as Select from '$lib/components/Select/index.js';
 
     let test = $state();
 
@@ -22,12 +20,6 @@
 <div class="flex h-full w-full flex-col justify-center p-4">
     <Heading variant="light" size="medium"></Heading>
     <Button variant="dark" size="large" onclick={() => (test = !test)} />
-    <Select.Root {items}>
-        <Select.Trigger></Select.Trigger>
-        <Select.Content>
-            {items.value}
-        </Select.Content>
-    </Select.Root>
     <Alert.Root>
         <Alert.Header>Some header</Alert.Header>
         <Alert.Content>Some content</Alert.Content>
