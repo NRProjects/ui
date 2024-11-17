@@ -27,3 +27,4 @@ vite.config.ts.timestamp-*
 /src/routes/
 /src/app.d.ts
 /src/app.html
+dev

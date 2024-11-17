@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Button from '$lib/components/Button.svelte';
+    import Button from '$lib/components/Button/Button.svelte';
     import { cn } from '$lib/utils/utils.js';
     import type { AlertDialogProps } from '$types/types.js';
 

@@ -1,20 +1,34 @@
 import type { HTMLAttributes } from 'svelte/elements';
 import type { Snippet } from 'svelte';
+import type { TransitionConfig } from 'svelte/transition';
+import type { Scale } from 'lucide-svelte';
+import { scale } from 'svelte/transition';
+import type {
+    BlurParams,
+    CrossfadeParams,
+    DrawParams,
+    FadeParams,
+    FlyParams,
+    ScaleParams,
+    SlideParams,
+} from 'svelte/transition';
 
 export type ElementType = 'input' | 'label' | 'heading' | 'button';
 export type ColorScheme = 'light' | 'dark';
 export type Size = 'small' | 'medium' | 'large';
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type Transition = (node: Element, params?: any) => TransitionConfig;
 
 export interface Props {
     class?: string | undefined;
     children?: Snippet | undefined;
-    props?: any;
+    props?: unknown;
     name?: string;
     variant?: ColorScheme;
     size?: Size;
+    transition?: Transition;
+    transitionConfig?: BlurParams | CrossfadeParams | DrawParams | FadeParams | FlyParams | ScaleParams | SlideParams;
 }
-
-export interface ButtonProps extends Omit<HTMLAttributes<HTMLButtonElement>, keyof Props>, Props {}
 
 // export interface AlertDialogProps extends Omit<HTMLAttributes<never>, keyof GenericProps>, GenericProps {
 //     content?: string;

@@ -37,7 +37,7 @@ export const variants = {
     button: {
         mode: {
             light: 'border-gray-200 bg-white hover:bg-gray-200',
-            dark: 'text-white',
+            dark: 'text-white bg-zinc-950 border-zinc-700 hover:bg-zinc-800',
         },
         size: {
             small: 'w-[4rem] rounded-md font-medium border px-2 py-1 text-sm',
