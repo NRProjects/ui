@@ -14,11 +14,8 @@
     }: ButtonProps = $props();
 </script>
 
-<a {href}>
-    <button
-        class={cn('transition-all duration-200 ease-in-out', getVariant('button', variant, size), _class)}
-        {...props}
-    >
+<a {href} class={cn('transition-all duration-200 ease-in-out', getVariant('button', variant, size), _class)}>
+    <button {formaction} {...props}>
         {#if children}
             {@render children()}
         {:else}
